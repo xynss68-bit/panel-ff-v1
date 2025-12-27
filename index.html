@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake Panel FF</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #111;
+
+            color: white;
+
+            margin: 0;
+
+            padding: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            overflow: hidden;
+
+        }
+
+        .container {
+
+            background-color: #222;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+            width: 300px;
+
+            text-align: center;
+
+        }
+
+        h1 {
+
+            margin: 0 0 20px 0;
+
+        }
+
+        .option {
+
+            margin: 15px 0;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .btn {
+
+            background-color: #444;
+
+            color: white;
+
+            border: none;
+
+            padding: 5px 15px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+        }
+
+        .btn:hover {
+
+            background-color: #555;
+
+        }
+
+        #processBtn {
+
+            background-color: #007BFF;
+
+            width: 100%;
+
+            margin-top: 20px;
+
+            padding: 10px;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            border: none;
+
+            border-radius: 5px;
+
+        }
+
+        #processBtn:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        .loading-text {
+
+            display: none;
+
+            font-size: 16px;
+
+            margin-top: 20px;
+
+            color: yellow;
+
+        }
+
+        .finish-text {
+
+            display: none;
+
+            font-size: 20px;
+
+            margin-top: 20px;
+
+            color: #00FF00;
+
+            font-weight: bold;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Panel FF</h1>
+
+        <div class="option">
+
+            <span>Auto Aim</span>
+
+            <button class="btn" onclick="toggleOption(this)">Off</button>
+
+        </div>
+
+        <div class="option">
+
+            <span>Speed Hack</span>
+
+            <button class="btn" onclick="toggleOption(this)">Off</button>
+
+        </div>
+
+        <div class="option">
+
+            <span>Body Headshot</span>
+
+            <button class="btn" onclick="toggleOption(this)">Off</button>
+
+        </div>
+
+        <div class="option">
+
+            <span>Inverted Ice(gloowall)</span>
+
+            <button class="btn" onclick="toggleOption(this)">Off</button>
+
+        </div>
+
+        <button id="processBtn" onclick="startLoading()">Proses Panel</button>
+
+        <div class="loading-text" id="loadingText">Memproses...</div>
+
+        <div class="finish-text" id="finishText">wkwk,ngarep apa lu😹😹</div>
+
+    </div>
+
+    <script>
+
+        function toggleOption(button) {
+
+            if (button.innerText === "Off") {
+
+                button.innerText = "On";
+
+                button.style.backgroundColor = "#28a745";
+
+            } else {
+
+                button.innerText = "Off";
+
+                button.style.backgroundColor = "#444";
+
+            }
+
+        }
+
+        function startLoading() {
+
+            document.getElementById('loadingText').style.display = 'block';
+
+            setTimeout(function() {
+
+                document.getElementById('loadingText').style.display = 'none';
+
+                document.getElementById('finishText').style.display = 'block';
+
+            }, 3000); // Simulate a 3-second loading time
+
+        }
+
+    </script>
+
+</body>
+
+</html>
